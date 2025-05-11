@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Animation</title>
+  <style>
+    body {
+        background-color: #111;
+  color: rgb(246, 250, 246);
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  margin: 0;
+    }
+
+    .typing-container {
+      max-width: 800px;
+      font-size: 1.1rem;
+      white-space: pre-wrap;
+      border-right: 2px solid rgb(237, 243, 237);
+      overflow: hidden;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50% {
+        opacity: 1;
+      }
+      50.1%, 100% {
+        opacity: 0;
+      }
+    
+    }
+  </style>
+</head>
+<body>
+
+  <div class="typing-container" id="typingText"></div><span class="cursor">|</span>
+
+  <script>
+    const text = `Thank you for staying with me until now. Two months may seem like a short time to others, but for me, it means everything—because each day with you feels like a blessing I never thought I deserved. You’ve always been precious to me, from the very beginning, and that hasn’t changed one bit. It never will. I would do anything for you, even the most difficult, tiring, or overwhelming things, because for you, nothing feels too much. Nothing feels impossible. I know this gift might seem too simple, not grand or perfect, but please believe me—it’s made with all of my heart, with thoughts of you in every word and every detail. I’m truly sorry for the times I’ve been difficult, for the moments I made you upset, for the moods and mistakes. I’m not perfect, but I promise I’m always trying, especially when it comes to you. You’re the best person I’ve ever met—the kindest, most beautiful soul I’ve ever known. And even when the world feels cold, you remain the warmth that keeps me going. You’re the reason I smile, the reason I try, and the reason I believe in love. Sometimes I still can’t believe I have you, that I get to be with someone so wonderful. I find myself asking how I ever got this lucky. Sometimes, I even feel like I don’t deserve to stand beside you, yet here you are—still holding my hand, still choosing me. You don’t realize how deeply you’ve affected me, how much you’ve made me feel. I love you in ways I never knew I could, in depths I never thought I had. I’d do anything just to see you happy, to see you shine. I love you endlessly, Maxy. Truly, deeply, and without end. You are so incredibly precious to me, in ways words could never fully express. I still want to be by your side, always. I want to keep admiring you from up close, to continue being proud of you—because I’ve always been proud of you, since the very start. You’re not just the coolest, kindest, and prettiest person I’ve ever met—you’re also the one who’s taught me what it means to love, and be loved. And no matter what happens in the future, please remember this: you will always be loved, especially by me. `;
+
+    let i = 0;
+    const speed = 40; // kecepatan ketik (ms)
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typingText").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
