@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple surat untukmu.</title>
+  <link rel="stylesheet" href="./style.css" />
+  <style>
+    .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #faf0f0;
+      text-align: center;
+    }
+    .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  background-color: #004080;
+  transform: translateY(1px);
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Amplop nya dipencet ya cinta ✉️</div>
+
+    <div class="envelope-wrapper">
+      <div class="envelope">
+        <div class="letter">
+          <div class="text">
+            <strong>Dear My lovely, Maxy.</strong>
+            <p>
+                Finally, we've reached our second month.
+                I feel so lucky to be with you. You're the best thing that’s ever happened to me my home, my heart,
+                my universe, my galaxy,
+                a part of me I can’t afford to lose.
+                Thank you for staying, for loving,
+                for being my person. Here’s to many more months, more laughter, and more love
+                with you, always.
+
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="heart"></div>
+    </div>
+
+    <a class="btn btn-primary" href="nextletter.html" role="button">Next letter. </a>
+    <a class="btn btn-primary" href="flowers/index.html" role="button">Flowers. </a>
+
+  <script>
+    const envelope = document.querySelector('.envelope-wrapper');
+    envelope.addEventListener('click', () => {
+      envelope.classList.toggle('flap');
+    });
+
+    function handleNext() {
+      alert("Next button clicked! Lanjut ke bagian berikutnya.");
+      // Ganti ini dengan aksi lain sesuai kebutuhanmu
+    }
+  </script>
+</body>
+</html>
